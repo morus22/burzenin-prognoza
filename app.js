@@ -4,6 +4,7 @@ const app = express()
 const hbs = require('hbs')
 const take_coordinates = require('./my_module/coordinates')
 const show_weather = require('./my_module/weather')
+const port = process.env.PORT || 3000
 
 app.set('view engine','hbs')
 app.use(express.static(__dirname + '/public'))
@@ -31,4 +32,4 @@ app.get('/help',(req,res)=>{
     res.render('help',{name:'help'})
 })
 
-app.listen(3000,console.log('server is listening at 3000'))
+app.listen(port,console.log(`server is listening at ${port}`))

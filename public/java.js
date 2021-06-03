@@ -9,7 +9,7 @@ forma.addEventListener('submit',(evt)=>{
     evt.preventDefault()
     message1.innerText='Loading...'
     const input_value = input.value
-const url = `http://localhost:3000/weather?szukaj=${input_value}`
+const url = `/weather?szukaj=${input_value}`
     console.log(input_value)
     fetch(url).then((resp)=>{
        return resp.json()
