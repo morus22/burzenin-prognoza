@@ -14,6 +14,10 @@ function show_weather(data,callback){
     } else {
         
         var pogoda = {
+            cordinates:{
+                longtitude:data.long,
+                latitude:data.lat
+            },
             place:resp.body.location.name,
             cloud:resp.body.current.weather_descriptions[0],
             temp:resp.body.current.temperature,
